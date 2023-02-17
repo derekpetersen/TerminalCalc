@@ -34,14 +34,16 @@ def operations(num1, num2):
     else:
         return "Enter a valid operator, please"
 
-active = True
-cal_num = 1
+# ~~~Global variables~~~
+# Starting state of the calculator
 
+
+# Main calculator function
 def calculator():
-
-    global cal_num
+#Needs to be able to access the 'operator' function within this function
     global operator
-    global active
+    active = True
+    cal_num = 1
     calculations = {}
     while active == True:
         if cal_num <= 1:
@@ -57,7 +59,7 @@ def calculator():
             calculations = {}
             cal_num = 1
             clear_console()
-            end = input("do you want to end this session and exit? y or n: ")
+            end = input("Do you want to end this session and exit? y or n: ")
             if end == "y":
                 clear_console()
                 active = False
